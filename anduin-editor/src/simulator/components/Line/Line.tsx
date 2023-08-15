@@ -1,3 +1,5 @@
+import { LineProps } from '@/typeprops/Line';
+
 const LineDescribe = {
   type: 'Line',
   props: {
@@ -7,15 +9,9 @@ const LineDescribe = {
   key: 'Line-random'
 }
 
-export interface LineProps{
-  style: {
-    height: number;
-    backgroundColor: string;
-  }
-}
-
 export default function Line(props: LineProps){
   const { style } = props;
+  console.log(style)
   return (
     <div className="w-full" style={{ 
       height: `${style.height}px`,

@@ -4,12 +4,12 @@ import {
   useDispatch as useReduxDispatch,
   type TypedUseSelectorHook,
 } from 'react-redux';
-import protocolSlice from './protocol';
+import simulatorSlice from './simulator';
 import { middleware } from './middleware';
 
 export const reduxStore = configureStore({
   reducer: {
-    protocol: protocolSlice.reducer
+    simulator: simulatorSlice.reducer
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware().concat(middleware)
